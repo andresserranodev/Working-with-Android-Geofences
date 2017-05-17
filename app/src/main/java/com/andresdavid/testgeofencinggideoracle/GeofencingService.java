@@ -24,7 +24,7 @@ public class GeofencingService extends IntentService {
         GeofencingEvent geofencingEvent = GeofencingEvent.fromIntent(intent);
         if(geofencingEvent.hasError())
         {
-            Log.e(LOG_TAG,"geofencingEvent.hasError()");
+            Log.e(LOG_TAG,"geofencingEvent hasError");
         }
         else{
             int transition = geofencingEvent.getGeofenceTransition();
@@ -32,10 +32,10 @@ public class GeofencingService extends IntentService {
             Geofence geofence = geofenceList.get(0);
             String requestId = geofence.getRequestId();
             if(transition == Geofence.GEOFENCE_TRANSITION_ENTER){
-                Log.d(LOG_TAG,String.format("GEOFENCE_TRANSITION_ENTER %s",requestId));
+                Log.d(LOG_TAG,String.format("GEOFENCE_TRANSITION_ENTER on %s",requestId));
             }
             else if(transition == Geofence.GEOFENCE_TRANSITION_EXIT){
-                Log.d(LOG_TAG,String.format("GEOFENCE_TRANSITION_EXIT %s",requestId));
+                Log.d(LOG_TAG,String.format("GEOFENCE_TRANSITION_EXIT  on %s",requestId));
             }
         }
 
