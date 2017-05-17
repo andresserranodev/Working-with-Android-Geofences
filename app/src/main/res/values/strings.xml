@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TestGeofencingGideOracle</string>
+    <string name="stopgeofencemonitor">Stop GeofenceMonitor</string>
+    <string name="stargeofencemonitor">Star GeofenceMonitor</string>
+    <string name="starlocationmonitor">Star LocationMonitor</string>
+</resources>
